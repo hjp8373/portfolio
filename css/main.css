@@ -4,7 +4,7 @@ header{
     height: 70px;
     position: fixed;
     top: 0;
-    z-index: 500;
+    z-index: 1500;
     /*background: rgba(255,255,255,0.5);*/
     background: #fff;
    
@@ -41,8 +41,8 @@ header > div > ul > li p {
 header > div > ul > li.on {
     font-weight: bold
 }
-section{width: 100%;position: relative;}
-article, footer {width: 90%; margin: 0 auto;}
+section{width: 100%;position: relative;min-width: 1600px;}
+article, footer {width: 90%; margin: 0 auto; }
 #sec1 {
     height: 100vh;
     overflow: hidden;
@@ -50,14 +50,19 @@ article, footer {width: 90%; margin: 0 auto;}
 #sec1 video {
     width: 100%;
 }
-
-#sec1 p.result{      
-    display: inline-block;
+#sec1 p{
     font-size:30px;
     line-height: 28px;
     box-sizing: border-box; 
     position: absolute;
+}
+#sec1 p.result{         
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+#sec1 p.second{    
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);    
 }
@@ -66,10 +71,10 @@ article, footer {width: 90%; margin: 0 auto;}
     overflow: hidden;
 }
 #sec2 .canvas {
-    height:820px;
+    height:800px;
     width: 90%;
     margin: 0 auto;
-    _z-index: 1500;
+    _z-index: 50;
     
     /*position: fixed;
     top: 150px;
@@ -77,6 +82,9 @@ article, footer {width: 90%; margin: 0 auto;}
 }
 #sec2 .canvas img{opacity: 0;}
 #sec2 .canvas .top {
+    position: absolute;
+    top: 0;
+    z-index: 500;
     width: 100%;
     transition: 2s;
 }
@@ -84,14 +92,14 @@ article, footer {width: 90%; margin: 0 auto;}
     position: absolute;
     top: 0;
     right: 0;
-    height: 820px;      
+    height: 800px;      
     transition: 4s;
 }
 #sec2 .canvas .ll{
     position: absolute;
     top: 0;
     left: 0;
-    height: 820px;       
+    height: 800px;       
     transition: 2s;
 }
 #sec2 .canvas .lb{
@@ -232,7 +240,7 @@ article, footer {width: 90%; margin: 0 auto;}
     top: 80px;
     width: 550px;
 }
-.slide_Up {
+.slide_Up  {
     position: absolute;
     width: 448px;
     height: 260px;
@@ -243,15 +251,26 @@ article, footer {width: 90%; margin: 0 auto;}
     background-size: 100% auto;            
     overflow: hidden;
     _cursor: pointer;
-    animation: slide_move 5s;
+    animation: slide_move 15s;
+}
+.slide_Up2{
+    position: absolute;
+    width: 448px;
+    height: 260px;
+    right: 182px;
+    top: 160px;
+    background: url('../img/onlybath_pc.png');
+    background-position: 0 0;
+    background-size: 100% auto;            
+    overflow: hidden;
+    _cursor: pointer;
+    animation: slide_move 10s;
 }
 .view:hover .slide_Up {
    
 }
-@keyframes slide_move {
-    0%{background-position: 0 0;}
-    50%{background-position: 0 50%;}
-  100% {background-position: 50% 100%;}
+@keyframes slide_move {   
+  100% {background-position: 0% 100%;}
 }
 #sec2 .art2 > ul > li > .explanation{
     width: 600px;
@@ -300,12 +319,14 @@ article, footer {width: 90%; margin: 0 auto;}
     border-radius: 25px;
     margin-right: 20px;
     transition: 3s;
-    cursor: pointer;
-}
-#sec2 .art2 .btn_Box p.tg{
-    background: url(../img/tg.png);
-    background-size: 90%;
+    cursor: pointer
+   
     
+}
+#sec2 .art2 .btn_Box p.tg{;
+    background-image: url(../img/tg.png);
+    background-size: 90%;
+    transition: 3s;
 }
 .hh {
     width: 100%;
@@ -317,12 +338,12 @@ article, footer {width: 90%; margin: 0 auto;}
 .h-top {
     top: 0;
     background: #fff;
-    height: 10vh;
+    height: 11vh;
     _background: pink;
     z-index: 100;
 }
 .h-bottom {
-    height: 4.7vh;
+    height: 6vh;
     bottom: 0;
     background: #fff;
     _background: pink;
