@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>박지현 포트폴리오</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+<!--    <script src="typed.js-master/src/typed.js"></script>-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/h_logo.ico" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <style>        
+h2{
+    width: 100%;
+    line-height: 90px;
+    font-size: 25px;
+    margin-bottom: 30px;
+    letter-spacing: 10px
+}
+        #sec3 .art3{
+            _border: 1px solid;
+            text-align: right;
+            height: 300px;
+        }
+        #sec3 .art3 p {
+            line-height: 3;
+            margin-right: 10px; 
+        }
+        #sec3 .art3 p:nth-child(2){
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            transition: all ease 1s;            
+        }
+        #sec3 .art3 p:nth-child(2):hover {
+            transform: rotate(1deg)
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<!--들어갈 효과들 : 패럴렉스. 부분 스크롤, 텍스트 타이핑 효과, 페이드 인, 슬라이드.-->
+<body>
+  <header>
+     <div>
+         <img src="img/main_logo.png" alt="">
+         <ul>
+             <li class="on">HOME</li>
+             <li>ABOUT ME</li>
+             <li>PORTFOLIO</li>
+             <li>CONTACT</li>
+         </ul>
+     </div>      
+  </header><!--헤더-->
+  <section id="sec1">
+     <video src="img/main_bg.mp4" muted autoplay></video>
+      <p class="result" style="font-size: 30px;"></p>      
+  </section><!--ㅡmain1-->
+   
+  <section id="sec2">  
+    <div class="canvas">
+        <!--<img src="img/line.png" alt="테두리">-->
+        <!--<img src="img/line2.png" alt="테두리">-->
+        <img class="top" src="img/line-top.png" alt="테두리">
+        <img class="lr" src="img/line-right.png" alt="테두리">
+        <img class="ll" src="img/line-left.png" alt="테두리">
+        <img class="lb" src="img/line-bottom.png" alt="테두리">
+    </div>   
+     <article class="art1">
+        <h2>ABOUT ME</h2>
+        <div class="effect-wrap">
+            <div class="effect">
+                <figure class="front">
+                    <img src="http://placehold.it/320x450/9c9c9c/ffffff?text=front" alt="front"/>   
+                </figure>
+                <figure class="back">
+                    <img src="http://placehold.it/320x450/9c9c9c/ffffff?text=back" alt="back"/>
+                </figure>
+            </div>
+        </div>        
+        <ul>
+            <li>NAME <br><span>-박 지현 (JiHyun Park)</span></li>
+            <li>DATE OF BIRTH <br><span>- 1998.02.03</span></li>
+            <li>LOCATION <br><span> - 경기도 고양시 일산동구</span></li>
+            <!--<li>E-MAIL <br><span> - pormz5620@gmail.com</span></li>
+            <li>MOBILE <br><span>- +82 10-5620-8373</span></li>-->
+            <li>EDUCATION <br><span>- 방송정보국제교육원 (웹퍼블리싱, 프론트앤드) 수료 예정</span></li>
+            <li>SKILL/TOOL<br><span>- HTML5, CSS3, Bootstrap, JavaScritp, Jquery, Photoshop</span></li>
+        </ul>
+        <div class="about_txt">
+            <i class="fas fa-quote-left"></i>
+            <span>아무말 아무말 아무말 아무말 아무말..주저리 주저리...</span>
+            <i class="fas fa-quote-right"></i>            
+        </div>
+     </article> 
+     <article class="art2">
+     <h2>PORTFOLIO</h2>
+          <ul class="container">
+              <li class="page">
+                  <img class="view" src="img/imac.png" alt="모니터화면">
+                  <div class="slide_Up">
+                      <!--<img src="http://placehold.it/390x550" alt="">-->
+                  </div>
+                  <div class="explanation">
+                      <h3>01</h3>
+                      <p>프로젝트명<span> : KINTEX 홈페이지 리뉴얼[개인]</span></p>
+                      <p>설명<span class="text">: 최근 웹디자인 트랜드에 많이 떨어진 모습으로 디자인 적 요소가 없어 보인다. 또한, 서브페이지에서 메뉴의 영역 밖으로 마우스 포인터가 나갔음에도 메뉴화면이 사라지지 않는 오류가 발견 되었다.
+                            </span> 
+                      </p>
+                    <p>제작기간<span> : 3주</span></p>
+                    <p>지원기기<span> : PC, Tablet, Mobile</span></p>
+                    <p>디자인 컨셉<span> : 심플하면서 정확한 정보전달</span></p>
+                    <a href="https://hjp8373.github.io/addtest/index.html" target="_blank">MORE VIEW</a>
+                    <a href="https://github.com/hjp8373/addtest" target="_blank">MORE CODE</a>
+                  </div>                
+              </li>
+              <li>
+                  <img class="view" src="img/imac.png" alt="모니터화면">
+                  <div class="slide_Up">
+                      <!--<img src="http://placehold.it/390x550" alt="">-->
+                  </div>
+                  <div class="explanation">
+                      <h3>01</h3>
+                      <p><span>프로젝트명</span> : ONLYBATH 가상홈페이지 제작[팀프로젝트]</p>
+                      <p><span>설명</span> : 최근 인테리어 시공업체의 디자인 트렌드를 조사 후에 가상의 회사의 컨셉을 설정. 
+                                             ONLYBATH는 욕실전문 시공업체로 설정하였으며 방송협찬, 관공서인테리어, 가정집 등 다양한 곳에서의 인테리어 디자인을 맡아서 디자인 및 제작 한다.
+                      </p>
+                    <p><span>제작기간</span> : 3주 </p>
+                    <p><span>지원기기</span> : PC, Tablet, Mobile</p>
+                    <p><span>디자인 컨셉</span> : </p>
+                    <a href="https://hjp8373.github.io/onlybath/index.html" target="_blank">MORE VIEW</a>
+                    <a href="https://github.com/hjp8373/onlybath" target="_blank">MORE CODE</a>
+                  </div>                
+              </li>              
+          </ul>
+          <div class="btn_Box">
+              <p class="tg">1</p>
+              <p>2</p>
+          </div>
+              <div class="hh h-top"></div>
+              <div class="hh h-bottom"></div>
+      </article>     
+  </section> <!--about me-->
+  <section id="sec3">
+    <!--<video src="img/Cruising%20-%2025665.mp4" muted autoplay loop ></video>-->
+      <article class="art3">
+          <h2>CONTACT ME</h2>
+          <p>끝까지 봐주셔서 감사합니다 :&#41;</p>
+          <p>Pnoe : 010 - 5620 - 8373</p>
+          <p>E-mail : pormz5620@gmail.com</p>
+      </article>      
+  </section><!---->
+  <footer>
+      <address>Copyright 2020. jihyun All pictures cannot be copied without permission</address>
+  </footer>
+   
+<script>
+    String.prototype.toKorChars = function() { 
+        var cCho = [ 'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ' ], 
+        cJung = [ 'ㅏ', 'ㅐ', 'ㅑ', 'ㅒ', 'ㅓ', 'ㅔ', 'ㅕ', 'ㅖ', 'ㅗ', 'ㅘ', 'ㅙ', 'ㅚ', 'ㅛ', 'ㅜ', 'ㅝ', 'ㅞ', 'ㅟ', 'ㅠ', 'ㅡ', 'ㅢ', 'ㅣ' ], 
+        cJong = [ '', 'ㄱ', 'ㄲ', 'ㄳ', 'ㄴ', 'ㄵ', 'ㄶ', 'ㄷ', 'ㄹ', 'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅁ', 'ㅂ', 'ㅄ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ' ], cho, jung, jong; 
+        var str = this, 
+        cnt = str.length, 
+        chars = [], 
+        cCode; 
+        for (var i = 0; i < cnt; i++) { 
+            cCode = str.charCodeAt(i); 
+            if (cCode == 32) { 
+              chars.push(" ");
+              continue;
+            } // 한글이 아닌 경우 
+            if (cCode < 0xAC00 || cCode > 0xD7A3) { 
+                chars.push(str.charAt(i)); continue; 
+                } 
+            cCode = str.charCodeAt(i) - 0xAC00; 
+
+            jong = cCode % 28; 
+            // 종성 
+            jung = ((cCode - jong) / 28 ) % 21 
+
+            // 중성 
+            cho = (((cCode - jong) / 28 ) - jung ) / 21 
+            // 초성 
+
+            //기본 코드 테스트가 ㅌㅔㅅ-ㅌ- 형식으로 저장됨 
+            // chars.push(cCho[cho], cJung[jung]); 
+            // if (cJong[jong] !== '') { 
+            //     chars.push(cJong[jong]); 
+            //     } 
+
+
+            //  테스트라는 문장이 있으면 ㅌ테ㅅ스ㅌ트 형식으로 저장되도록함 (타이핑을 위해서)
+            chars.push(cCho[cho]);
+            chars.push(String.fromCharCode( 44032 + (cho * 588) + (jung  * 28)));
+            if (cJong[jong] !== '') { 
+                chars.push(String.fromCharCode( 44032 + (cho * 588) + (jung  * 28) + jong ));
+            }           
+        }         
+        return chars; 
+    }
+
+    //타이핑할 문장
+    var result  = "포트폴리오입니다.";
+    var typeing1=[];
+    result = result.split(''); // 한글자씩자름
+
+    //각글자 초성,중성,종성으로 나눔
+    for(var i =0; i<result.length; i++){
+        typeing1[i]=result[i].toKorChars();
+    }
+
+    //출력할 엘리먼트요소 가져옴 
+    var resultDiv = document.getElementsByClassName("result")[0];
+
+    //
+    var text = "";
+    var i=0; 
+    var j=0; 
+    var text = '';
+
+    //총글자수
+    var imax = typeing1.length;
+
+    
+    setTimeout(function() {
+        //setInterval을 이용해 반복적으로 출력 
+        var inter = setInterval(typi,150);
+        function typi(){
+            //글자수만큼 반복후 종료 
+            if(i<=imax-1){
+                //각 글자가 초성 중성 종성 순서대로 추가되도록 
+                var jmax = typeing1[i].length;
+                resultDiv.innerHTML = text + typeing1[i][j];
+                j++;
+                if(j==jmax){
+                    text+=  typeing1[i][j-1];//초성중성종성 순서대로 출력된 글자는 저장 ( 다음 글자와 이어붙이기 위해서 )
+                    i++;
+                    j=0;
+                }
+            } else{
+                clearInterval(inter);
+            }
+        }
+    }, 4000);
+    
+    
+    $('#sec2 > .art2 > ul > li').fadeOut();    
+    $('#sec2 > .art2 > ul > .page').fadeIn();
+    
+    var canvas = $('#sec2 > .canvas'),
+        card = $('#sec2 .art1 .effect-wrap'),
+        t_box = $('#sec2 .art1 .about_txt');
+    
+    $(window).scroll(function () {         
+     /*   switch(scrollValue){     
+                case 600:   canvas.css({position:'fixed', top:'120px', left:'5%'});
+                            card.css('top', '150px');
+                            t_box.css({position:'absolute', top:'650px', left:"40%"});    
+                            break;
+                case 900:   canvas.css({position:'fixed', top:'120px', left:'5%'});
+                            card.css('top', '150px');
+                            t_box.css({position:'absolute', top:'650px', left:"40%"});    
+                            break;
+                case 1599:  canvas.css({position :'absolute', top:'700px', left:'5%'});
+                            break;
+                case 1600:  canvas.css({position :'absolute', top:'700px', left:'5%'});
+                            break;
+                case 1605:  canvas.css({position :'absolute', top:'700px', left:'5%'});
+                            break;
+        }*/
+        const sec2 = $("#sec2");
+        const sec3 = $("#sec3");        
+                var st = $(this).scrollTop();
+
+                console.log("st:"+ st);
+                console.log("sec2-top:"+ sec2.offset().top);
+                console.log("sec3-top:"+ sec3.offset().top);
+                /*if(st <)*/
+                if(st+150 >= sec2.offset().top && st <= sec3.offset().top-980) {
+                    $(".h-top ").show();
+                    $(".h-bottom ").show();
+                    canvas.css({position:'fixed', top:'95px', left:'5%'});
+                    canvas.find('>img').css('opacity', '1');
+                    card.css('top', '150px');
+                    t_box.css({position:'absolute', top:'650px', left:"40%"});
+                } else {
+                    $(".h-top").hide();
+                    $(".h-bottom").hide();
+                    /*$(".h-box > .h-top").css('height', '70px');*/
+                    canvas.css({position :'absolute', top:'800px', left:'5%'});
+                    
+                    card.css('top', '150px');
+                }
+                
+        
+    });
+
+        
+</script>
+</body>
+</html>
