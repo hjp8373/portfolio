@@ -225,7 +225,6 @@ article, footer {width: 90%; margin: 0 auto;}
 #sec2 .art2> ul > li {
     position: absolute;
     width: 90%;
-    _border: 1px solid #fff;
 }
 .view{
     position: absolute;
@@ -256,7 +255,6 @@ article, footer {width: 90%; margin: 0 auto;}
 }
 #sec2 .art2 > ul > li > .explanation{
     width: 600px;
-    border: 1px solid pink;
     margin: 150px 170px;
 }
 #sec2 .art2 ul li .explanation h3 {
