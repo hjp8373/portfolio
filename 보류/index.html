@@ -249,27 +249,40 @@ h2{
         }
     }, 4000);
      
+    
+    
+    /*메뉴 포커스*/
+    var menu = $('header div ul li'),
+            sec = $('section'),
+            art = sec.find(' > article');
+    menu.click(function(){
+           var tg = $(this),
+               menu_I = tg.index();
+            
+            var sec_index = sec.eq(menu_I),
+                tt = sec_index.offset().top;
+            
+            $('html, body').stop().animate({scrollTop:tt});
+        });
+    /*fixed 변수*/
     var canvas = $('#sec2 > .canvas'),
         card = $('#sec2 .art1 .effect-wrap'),
         t_box = $('#sec2 .art1 .about_txt');
     
-    $(window).scroll(function () {         
-     /*   switch(scrollValue){     
-                case 600:   canvas.css({position:'fixed', top:'120px', left:'5%'});
-                            card.css('top', '150px');
-                            t_box.css({position:'absolute', top:'650px', left:"40%"});    
-                            break;
-                case 900:   canvas.css({position:'fixed', top:'120px', left:'5%'});
-                            card.css('top', '150px');
-                            t_box.css({position:'absolute', top:'650px', left:"40%"});    
-                            break;
-                case 1599:  canvas.css({position :'absolute', top:'700px', left:'5%'});
-                            break;
-                case 1600:  canvas.css({position :'absolute', top:'700px', left:'5%'});
-                            break;
-                case 1605:  canvas.css({position :'absolute', top:'700px', left:'5%'});
-                            break;
-        }*/
+    $(window).scroll(function () {      
+        /*위치에 해당하는 메뉴 포커스*/
+        var sct_top = $(window).scrollTop();
+        
+        sec.each(function(){
+           var targett = $(this),
+               i = targett.index();
+            if(targett.offset().top <= sct_top){
+                menu.removeClass('on');
+                menu.eq(i).addClass('on');
+            }
+        });
+        
+        /*fixed 구현*/
         const sec2 = $("#sec2");
         const sec3 = $("#sec3");        
                 var st = $(this).scrollTop();
@@ -293,6 +306,11 @@ h2{
                     
                     card.css('top', '150px');
                 }
+        
+        
+        
+        
+    
     });
     $('#sec2 > .art2 > ul > li').fadeOut();    
     $('#sec2 > .art2 > ul > .page').fadeIn();
