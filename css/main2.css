@@ -42,103 +42,69 @@ header > div > ul > li.on {
     font-weight: bold
 }
 section{width: 100%;min-width: 1600px;}
-article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
+article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
+
 #sec1 {
     height: 100vh;
     overflow: hidden;
 }
-#sec1 video {
-    width: 100%;
-}
-#sec1 p{
-    font-size:30px;
-    line-height: 28px;
-    box-sizing: border-box; 
-    position: absolute;
-}
-#sec1 p.result{         
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
-}
-#sec1 p.second{    
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
-}
-#sec2 {
-    margin-top: 50px;
+#sec2 .main{
+    _height: 1000px;
     overflow: hidden;
 }
-#sec2 .canvas {
-    height:800px;
-    width: 90%;
-    margin: 0 auto;
-    _z-index: 50;
+#sec2 .main video{
+    width: 100%;
+}
+#sec2 .main p{
+     color: transparent; 
+    text-align: center; font-size: 60px; position: absolute; top: 0%; 
+    -webkit-text-stroke: 2px black;  
+    -moz-text-stroke: 2px black;
+    -ms-text-stroke:2px black;
+    -o-text-stroke: 2px black;
+    text-stroke: 2px black;
+    outline: 0;
+    _width: 100%; font-weight: 800; 
+    font-family: 'Montserrat-ExtraBold'; 
+    line-height: 60px; 
+    animation-name: slide-up1; animation-duration: 1.5s;
     
-    /*position: fixed;
-    top: 150px;
-    left: 5%;*/
 }
-#sec2 .canvas img{opacity: 0;}
-#sec2 .canvas .top {
-    position: absolute;
-    top: 0;
-    z-index: 500;
-    width: 100%;
-    transition: 2s;
+#sec2 .main p.result{
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -35%);
 }
-#sec2 .canvas .lr{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 800px;      
-    transition: 4s;
+#sec2 .main p.second{    
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);    
 }
-#sec2 .canvas .ll{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 800px;       
-    transition: 2s;
-}
-#sec2 .canvas .lb{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transition: 4s;
-}
-#sec2 .art1 h2{
-    position: absolute;
-    top: 20px;
-    left: 45%; 
-}
-.effect-wrap {
+/**/
+#sec2 .art1 .effect-wrap {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	_align-items: flex-start;
 	perspective: 1000px;
     width: 320px;
-    /*top: -650px;*/
+    top: 50px;
     left: 40%;
     margin-left: -230px;
     margin-bottom: 40px;
-    top: 150px
 }
-#sec2 .effect {
+#sec2 .art1 .effect {
 	position: relative;
 	width: 320px; 
     height: 450px;
     z-index: 50;
 }
-#sec2 .effect img {
+#sec2 .art1 .effect img {
 	width: 100%;
 	transition: all 0.6s ease 0.2s;
 	box-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.4);
 }
-#sec2 .effect figcaption {
+#sec2 .art1 .effect figcaption {
 	position: absolute;
 	bottom: 0%; left: 0;
 	width: 100%;
@@ -150,7 +116,7 @@ article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
 	opacity:1;
 	transition: all 0.5s ease;
 }
-#sec2 .effect .front {
+#sec2 .art1 .effect .front {
 	position: absolute; 
     left: 0; 
     top: 0;
@@ -162,7 +128,7 @@ article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
 	transition : transform 1s;
 	backface-visibility : hidden;
 }
-#sec2 .effect .back {
+#sec2 .art1 .effect .back {
 	position: absolute; 
     left: 0; 
     top: 0;
@@ -174,17 +140,17 @@ article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
 	backface-visibility : hidden;
 }
 
-#sec2 .effect:hover .front {
+#sec2 .art1 .effect:hover .front {
 	transform : rotateY(180deg);
 }
 
-#sec2 .effect:hover .back {
+#sec2 .art1 .effect:hover .back {
 	transform : rotateY(0);
 }
 #sec2 .art1 ul {
     position: absolute;
     left: 50%;
-    top: 190px;
+    top: 280px;
     transform: translate(5%);
     _border: 1px solid;
 }
@@ -198,38 +164,20 @@ article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
     margin-left: 3px;
     font-size: 15px;
     font-weight: 500;
+    white-space: pre-wrap;
 }
 #sec2 .art1 .about_txt{   
     position: absolute;
-    top: 600px;
+    bottom: 0px;
     left: 40%;
     height: 200px;
     
-    /*fixed 발생시 적용되는 스타일*/
-    /*position: absolute;
+    /*fixed 발생시 적용되는 스타일
+    position: absolute;
     top: 650px;
     left: 40%;*/
 }
-/*section2 - article2*/
-#sec2 .art2{
-    height: 800px;
-    border: none;
-    _opacity: 0;
-    z-index: 100;
-    
-    /*fixed 발생시 적용되는 스타일*/
-    margin-top: 400px;
-    _margin-bottom: 100px
-}
-#sec2 .art2 h2 {            
-    color: #000;
-    _text-align: center;
-    
-    /*fixed 발생시 적용되는 스타일*/
-    position: absolute;
-    left: 45%;
-    
-}
+/*art2*/
 #sec2 .art2 ul {
   height: 680px;
 }
@@ -301,13 +249,40 @@ article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
     margin-bottom: 60px
 }
 #sec2 .art2 ul li .explanation a {
+    display: block;
+    float: left;        
     padding: 10px 30px;
+    width: 160px;
+    height: 40px;
+    text-align: center;
 }
 #sec2 .art2 ul li .explanation a:nth-child(7){
-    margin-left: 120px
+    margin-left: 120px;            
 }
 #sec2 .art2 ul li .explanation a:last-child{
     margin-left: 20px;
+}
+#sec2 .art2 ul li .explanation a:before{
+    display: block;
+    content: "";
+    border-top: 1px solid #000 ;
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:0% 50%;
+}
+#sec2 .art2 ul li .explanation a:after{
+    display: block;
+    content: "";
+    border-bottom: 1px solid #000;
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:100% 50%;
+}
+#sec2 .art2 ul li .explanation a:hober:before{
+    transform: scaleX(1); 
+}
+#sec2 .art2 ul li .explanation a:hober:after{
+    transform: scaleX(1); 
 }
 #sec2 .art2 .btn_Box {
     position: absolute;
@@ -322,9 +297,7 @@ article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
     border-radius: 25px;
     margin-right: 20px;
     transition: 3s;
-    cursor: pointer
-   
-    
+    cursor: pointer;                
 }
 #sec2 .art2 .btn_Box p.tg{;
     background-image: url(../img/tg.png);
@@ -345,19 +318,60 @@ article, footer {width: 90%; margin: 0 auto; position: relative;height: 1000px;}
     _background: pink;
     z-index: 100;
 }
-.h-bottom {
+    .h-bottom {
     height: 6vh;
     bottom: 0;
     background: #fff;
     _background: pink;
     z-index: 100;
 }
-
-/*
-#sec4{
-    overflow-x: hidden
+#sec2 .art3{
+    _border: 1px solid;
+    text-align: right;
+    height: 400px;
 }
-*/
-/**/
-.art1{background: pink}
-.art2{background: skyblue}
+#sec2 .art3 p {
+    line-height: 3;
+    margin-right: 10px; 
+}
+#sec2 .art3 p:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    transition: all ease 1s;            
+}
+#sec2 .art3 p:nth-child(2):hover {
+    transform: rotate(1deg)
+}
+.canvas .top {
+    position: absolute;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    transition: 2s;
+}
+.canvas .lr{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 800px;      
+    transition: 4s;
+}
+.canvas .ll{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 800px;       
+    transition: 2s;
+}
+.canvas .lb{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: 4s;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+}
