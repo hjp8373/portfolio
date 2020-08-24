@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메인화면</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function(){
+           $("#hd").load("header.html"); 
+           /*$("#ft").load("footer.html"); */
+            /*business 배경 변경*/
+            var business = $('#business'),
+                title = business.find('> article'),
+                b_list = business.find('>article > ul.pc_ver > li');
+            
+            b_list.mouseover(function(){
+                
+                var ii = $(this).index();
+               if (ii == 0){
+                   business.css({background:"url(img/business1.jpg) no-repeat", "background-position":"50%","background-size":"cover"});
+               }else if(ii == 1){
+                    business.css({background:"url(img/business2.jpg) no-repeat","background-position":"50%","background-size":"cover"});
+                   
+               }else if(ii == 2){
+                   business.css({background:"url(img/business3.jpg) no-repeat","background-position":"50%","background-size":"cover"});
+               }
+            });
+            /*magazine 슬라이드*/
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+            $(window).scroll(function(){
+                var height = $(document).scrollTop(),
+                    sec1_Top= $('#business').offset().top;
+			     /*console.log(height);*/
+                if( height >= sec1_Top){
+                    $('header').css({background:"#fff"});
+                    $('header div.pc .logo').css({background:"url(img/logo1.png)no-repeat", "background-size":"80%", "background-position":"center"});                    
+                    $('header > div.pc > ul > li').css({color:"#424242"});
+                    $('header > div.pc > ul > li > ul > li').css({color:"#424242"});
+                    
+                    $('header div.mobile .m_logo img').attr("src", "img/logo1.png");
+                    $('header div.mobile .menu-trigger span').css({background:"#000"});
+                    
+                }else{
+                    $('header').css({background:"linear-gradient(rgba(0,0,0,0.5) 70px, rgba(0,0,0,0.8))"});
+                    $('header div.pc .logo').css({background:"url(img/logo-w.png)no-repeat", "background-size":"80%","background-position":"center"});
+                    $('header > div.pc > ul > li').css({color:"#fff"});
+                    $('header > div.pc > ul > li > ul > li').css({color:"#fff"});
+                    
+                    $('header div.mobile .m_logo img').attr("src", "img/logo-w.png");
+                    $('header div.mobile .menu-trigger span').css({background:"#fff"});
+                };
+                
+                /*console.log(sec1_Top);    */           
+            });
+           /* $('#news article ul.group_News li a.more').fadeOut();
+            $(window).resize(function(){
+               var wWidth = window.innerWidth;
+                
+               if(wWidth < 767){
+                   $('#news article ul.group_News li a.orange').fadeOut();
+                   $('#news article ul.group_News li a.more').fadeIn();
+               }else{
+                  $('#news article ul.group_News li a.orange').fadeIn();
+                   $('#news article ul.group_News li a.more').fadeOut();
+                   console.log("PC");
+               }
+            });*/
+            /*#last*/
+            
+            /*var leftA = $('#last article .container .leftA'),
+                rightA = $('#last article .container .rightA');
+            leftA.mouseover(function(){
+                $('.l-one').stop().fadeIn(100);
+                $('.l-two').stop().fadeIn(300);
+                leftA.$('.l-two').('.l-one').stop().animate();
+            }) .mouseleave(function(){
+                 $('.l-one').stop().fadeOut(300);
+                 $('.l-two').stop().fadeOut(100);
+                leftA.css({"border-style":"none"});
+                });
+            rightA.mouseover(function(){
+                $('.r-one').stop().fadeIn(100);
+                $('.r-two').stop().fadeIn(300);
+                rightA.css({"border-style":"solid", "border-color":"#ec8f26","border-width": "thin"});
+            }) .mouseleave(function(){
+                 $('.r-one').stop().fadeOut(300);
+                 $('.r-two').stop().fadeOut(100);
+                rightA.css({"border-style":"none"});
+                });*/
+        });
+        
+    </script>
+</head>
+<body>
+   <div id="hd"></div>
+    <section id="info">
+        <!--<video src="img/Pexels%20Videos%201851190%20(1).mp4" muted autoplay loop ></video>-->
+        <video src="img/Earth%20-%2017235.mp4" muted autoplay loop ></video>
+        <article>
+            <h2>MIRAE</h2>
+            <p>에너지, 주택개발 사업의 <br> 미래를 그리다.</p>
+        </article>
+    </section>
+    <section id="business">
+       <article>
+           <h3 class="title">사업소개</h3>
+            <p class="txt">미래를 준비하는 자세는, 기술의 발전입니다</p>
+            <ul class="pc_ver">
+                <li>                    
+                     <div class="box energy">
+                     <i class="far fa-sun icon"></i>
+                     <p>에너지</p>
+                        <h3><i class="fas fa-quote-left"></i>도전 합니다.<i class="fas fa-quote-right"></i></h3>
+                        <p>지속가능한 <br> 청정 미래에 도전합니다.</p>
+                        <a class="more" href="javascript:;;">
+                            <span>more</span>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="box home">
+                    <i class="fas fa-home icon"></i>
+                    <p>주택</p>
+                        <h3><i class="fas fa-quote-left"></i>창조 합니다.<i class="fas fa-quote-right"></i></h3>
+                        <p>주택의 한계를 넘어 <br> 지속가능한 가치를 만듭니다.</p>
+                        <a class="more" href="javascript:;;">
+                            <span>more</span>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="box build">
+                    <i class="fas fa-shapes icon"></i>
+                    <p>건설</p>
+                        <h3><i class="fas fa-quote-left"></i>혁신 합니다.<i class="fas fa-quote-right"></i></h3>
+                        <p>시공 위주의 건설을 넘어 <br> 끊임없는 가치를 혁신합니다.</p>
+                        <a class="more" href="javascript:;;">
+                            <span>more</span>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="mm_ver">
+                 <li>       
+                    <div class="iconBox">
+                     <i class="far fa-sun icon"></i>
+                      <p>에너지</p>                        
+                    </div>             
+                      <div class="box energy">                      
+                         <h3><i class="fas fa-quote-left"></i>도전 합니다.<i class="fas fa-quote-right"></i></h3>
+                         <p>지속가능한 <br> 청정 미래에 도전합니다.</p>
+                         <a class="more" href="javascript:;;">
+                             <span>more</span>
+                             <i class="fas fa-long-arrow-alt-right"></i>
+                         </a>
+                     </div>
+                 </li>
+                 <li>
+                    <div class="iconBox">
+                       <i class="fas fa-home icon"></i>
+                       <p>주택</p> 
+                    </div>                     
+                     <div class="box home">
+                         <h3><i class="fas fa-quote-left"></i>창조 합니다.<i class="fas fa-quote-right"></i></h3>
+                         <p>주택의 한계를 넘어 <br> 지속가능한 가치를 만듭니다.</p>
+                         <a class="more" href="javascript:;;">
+                             <span>more</span>
+                             <i class="fas fa-long-arrow-alt-right"></i>
+                         </a>
+                     </div>
+                 </li>
+                 <li>
+                    <div class="iconBox">
+                     <i class="fas fa-shapes icon"></i>
+                     <p>건설</p>                        
+                    </div>
+                     <div class="box build">
+                         <h3><i class="fas fa-quote-left"></i>혁신 합니다.<i class="fas fa-quote-right"></i></h3>
+                         <p>시공 위주의 건설을 넘어 <br> 끊임없는 가치를 혁신합니다.</p>
+                         <a class="more" href="javascript:;;">
+                             <span>more</span>
+                             <i class="fas fa-long-arrow-alt-right"></i>
+                         </a>
+                     </div>
+                 </li>
+             </ul>
+       </article>  
+    </section><!--섹션 1번째 끝-->
+    <section id="magazine">
+        <article>
+            <h3 class="title"><span></span>메거진<span></span></h3>
+            <p class="txt">다양한 준비와 도전들의 계획</p>
+            <a class="more" href="javascript:;;">
+                <span>more</span>
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </a>
+        </article>
+        <article class="slide_site">
+            <h3>NEWS</h3>
+            <div class="s_wrap swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                       <div>                           
+                          <h4>[매일경제_보도기사]</h4>
+                          <span>2020-08-02</span>
+                          <p>국내 최대 수상 <br> 태양광발전산업 수주</p>
+                          <a href="javascript:;;" class="more">
+                              <span>more</span>
+                              <i class="fas fa-long-arrow-alt-right"></i>
+                          </a>
+                       </div>
+                       <a href="javascript:;"><img src="img/magazine1.jpg" alt=""></a>
+                    </li>
+                    <li class="swiper-slide">
+                       <div>
+                           <h4>[조선일보_보도기사]</h4>
+                           <span>2020-06-30</span>
+                           <p>LNG터미널, 태양광발전소... <br> 건설명가 미래그룹의 변신</p>
+                           <a href="javascript:;;" class="more">
+                               <span>more</span>
+                               <i class="fas fa-long-arrow-alt-right"></i>
+                           </a>
+                       </div>
+                       <a href="javascript:;"><img src="img/magazine2.jpg" alt=""></a> 
+                    </li>
+                    <li class="swiper-slide">
+                       <div>
+                          <h4>[매일경제_보도기사]</h4>
+                          <span>2020-03-18</span>
+                          <p>미래수자인 디에스티지,<br> 순천 최대 숲세권 단지</p>
+                          <a href="javascript:;;" class="more">
+                              <span>more</span>
+                              <i class="fas fa-long-arrow-alt-right"></i>
+                          </a> 
+                       </div> 
+                       <a href="javascript:;"><img src="img/magazine3.jpg" alt=""></a>                
+                    </li>
+                </ul>
+                <div class="swiper-pagination">
+                    <p class="tg"></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="btn_box">
+                    <i class="fas fa-chevron-left swiper-button-prev"></i>
+                    <i class="fas fa-chevron-right swiper-button-next"></i>                
+                </div>
+            </div>
+        </article>              
+        <div class="parallax">
+            <p>PAEPARE FOR THE FUTURE</p>
+        </div>
+    </section> <!--섹션 2번째 끝-->
+    <section id="news">
+        <article>
+            <h3 class="title"><span></span>그룹소식<span></span></h3>
+            <p class="txt">미래Family의 새로운 소식들</p>
+            <a class="more" href="javascript:;;">
+                <span>more</span>
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </a>
+            <ul class="group_News">
+                <li>
+                    <img src="img/news1.jpg" alt=""/>
+                    <p>[파이낸뉴스_보도기사] <br> <span>2020-06-14</span></p>
+                    <p>인천 청라시티타워 건설사업 속도낸다</p>
+                    <a class="orange"  href="javascript:;">    <!--모바일에서는 "orange"클래스를 지우고 "more" 클래스를 부여-->  
+                            <span class="circle">
+                                <span class="yline"></span><!--세로줄-->
+                                <span class="xline"></span><!--가로줄-->       
+                            </span><!--원-->                                            
+                    </a>
+                    <a class="more" href="javascript:;;">
+                        <span>more</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <img src="img/news2.jpg" alt=""/>
+                    <p>[S메거진_보도기사] <br> <span>2020-06-12</span></p>
+                    <p>새만금 신시-야미지구 기회의 땅 호남, 세계인의 휴양도시 된다</p>
+                    <a class="orange" href="javascript:;">    <!--모바일에서는 "orange"클래스를 지우고 "more" 클래스를 부여--> 
+                            <span class="circle">
+                                <span class="yline"></span><!--세로줄-->
+                                <span class="xline"></span><!--가로줄-->       
+                            </span><!--원-->                  
+                    </a>
+                    <a class="more" href="javascript:;;">
+                        <span>more</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <img src="img/news3.png" alt=""/>
+                    <p>[서울경제_보도기사] <br> <span>2020-05-14</span></p>
+                    <p>미래, '하남감일 미래수자인' 이달 분양 시작</p>
+                    <a class="orange"  href="javascript:;">    <!--모바일에서는 "orange"클래스를 지우고 "more" 클래스를 부여-->  
+                            <span class="circle">
+                                <span class="yline"></span><!--세로줄-->
+                                <span class="xline"></span><!--가로줄-->       
+                            </span><!--원-->                  
+                    </a>
+                    <a class="more" href="javascript:;;">
+                        <span>more</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                </li>                
+            </ul>
+            <!--<div class="family">
+                <p>FAMILY SITE</p>
+                <ul>
+                    <li><a href="javascript:;"><img src="img/logo_haewon.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/logo_solaseado.png" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/logo_sujain.png" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/logo_ygport.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/Logo_pinebeach.png" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/logo_pinehills.png" alt=""></a></li>
+                </ul>
+            </div>-->
+        </article>        
+    </section><!--그룹소식 끝-->
+    <section id="last">
+        <article>
+            <h3 class="title"><span></span>인재채용<span></span></h3>
+            <p class="txt">미래에 도전하고 싶은 인재를 찾습니다</p>
+            <div class="container">
+                <!--<a class="leftA" href="javascript:;">채용정보</a>      
+                <div class="effect1">
+                    <span class="circleB l-one one"></span>
+                    <span class="circleB l-two two"></span> 
+                </div>             
+                <a class="rightA" href="javascript:;">FAQ</a>
+                <div class="effect2">                        
+                    <span class="circleB r-one one"></span>
+                    <span class="circleB r-two two"></span>
+                </div>          -->           
+                <a class="leftA" href="javascript:;" style="transition:none">채용정보</a>  
+                    <span class="circleB l-one one" ></span>
+                    <span class="circleB l-two two"></span> 
+                <a class="rightA" href="javascript:;" style="transition:none">FAQ</a>
+                    <span class="circleB r-one one" ></span>
+                    <span class="circleB r-two two" ></span>
+            </div>
+            <img src="img/talent.png" alt="인재"> 
+        </article>
+    </section>
+    <footer>
+        <div>
+            <img src="img/logo1.png" alt="로고" class="f-logo">
+            <address>Copyright © MIRAE CORPORATION Co., Ltd. All rights reserved.</address>
+        </div>
+    </footer>
+    <!--<div id="nav">
+         <a href="javascript:;" class="point">info <span></span></a>   
+         <a href="javascript:;">business <span></span></a>   
+         <a href="javascript:;">sustainable <span></span></a>   
+         <a href="javascript:;">news <span></span></a>   
+         <a href="javascript:;">talent <span></span></a>   
+    </div>-->
+</body>
+</html>
