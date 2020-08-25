@@ -27,3 +27,14 @@ body { font:16px ;font-family: 'NanumSquare', sans-serif;color:#333;
     color: #ec8f26;
     transform: scaleX(1)
 }
+#bg{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+#bg p {
+    position: absolute;
+    bottom: -25px;
+    right: 1%;
+    letter-spacing: 2px;
+}

@@ -24,7 +24,6 @@ header > div > ul {
     top: 0px;
     right: 5%;
     width: 500px;
-    _height: 70px;
 }
 header > div > ul > li {
     float: left;
@@ -49,7 +48,6 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
     overflow: hidden;
 }
 #sec2 .main{
-    _height: 1000px;
     overflow: hidden;
 }
 #sec2 .main video{
@@ -64,7 +62,6 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
     -o-text-stroke: 2px black;
     text-stroke: 2px black;
     outline: 0;
-    _width: 100%; font-weight: 800; 
     font-family: 'Montserrat-ExtraBold'; 
     line-height: 60px; 
     animation-name: slide-up1; animation-duration: 1.5s;
@@ -83,15 +80,11 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
 /**/
 #sec2 .art1 .effect-wrap {
 	position: relative;
-	display: flex;
 	justify-content: center;
-	_align-items: flex-start;
 	perspective: 1000px;
     width: 320px;
-    top: 50px;
     left: 40%;
-    margin-left: -230px;
-    margin-bottom: 40px;
+    margin:-60px 0 40px -230px;
 }
 #sec2 .art1 .effect {
 	position: relative;
@@ -152,7 +145,6 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
     left: 50%;
     top: 280px;
     transform: translate(5%);
-    _border: 1px solid;
 }
 #sec2 .art1 ul li{
     margin-bottom: 20px;            
@@ -201,7 +193,6 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
     background-position: 0 0;
     background-size: 100% auto;            
     overflow: hidden;
-    _cursor: pointer;
     animation: slide_move 15s;
 }
 .slide_Up2{
@@ -214,7 +205,18 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
     background-position: 0 0;
     background-size: 100% auto;            
     overflow: hidden;
-    _cursor: pointer;
+    animation: slide_move 10s;
+}
+.slide_Up3{
+    position: absolute;
+    width: 448px;
+    height: 260px;
+    right: 182px;
+    top: 160px;
+    background: url('../img/mirae.png');
+    background-position: 0 0;
+    background-size: 100% auto;            
+    overflow: hidden;
     animation: slide_move 10s;
 }
 .view:hover .slide_Up {
@@ -246,9 +248,87 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
     line-height: 2;
 }
 #sec2 .art2 ul li .explanation p:nth-child(6){
-    margin-bottom: 60px
+    margin-bottom: 40px
 }
-#sec2 .art2 ul li .explanation a {
+div.a-box{width: 180px;}
+a.animated-button:link, a.animated-button:visited {
+   	position: relative;
+   	display: block;
+   	margin: 10px auto 0;
+   	padding: 14px 15px;
+   	_color: #fff;
+   	font-size:14px;
+   	font-weight: bold;
+   	text-align: center;
+   	text-decoration: none;
+   	text-transform: uppercase;
+   	overflow: hidden;
+   	letter-spacing: .08em;
+   	border-radius: 0;
+   	/*text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+   	-webkit-transition: all 1s ease;
+   	-moz-transition: all 1s ease;
+   	-o-transition: all 1s ease;
+   	transition: all 1s ease;*/
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+   	content: "";
+   	position: absolute;
+   	height: 0%;
+   	left: 50%;
+   	top: 50%;
+   	width: 150%;
+   	z-index: -1;
+   	-webkit-transition: all 0.75s ease 0s;
+   	-moz-transition: all 0.75s ease 0s;
+   	-o-transition: all 0.75s ease 0s;
+   	transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+   	_color: #FFF;
+   	text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+   	height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+   	position: relative;
+   	display: block;
+   	margin: 20px auto 0;
+   	padding: 14px 15px;
+   	_color: #fff;
+   	font-size:14px;
+   	border-radius: 0;
+   	font-weight: bold;
+   	text-align: center;
+   	text-decoration: none;
+   	text-transform: uppercase;
+   	overflow: hidden;
+   	letter-spacing: .08em;
+   	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+   	-webkit-transition: all 1s ease;
+   	-moz-transition: all 1s ease;
+   	-o-transition: all 1s ease;
+   	transition: all 1s ease;
+}
+a.animated-button.sandy-three {
+    border: 1px solid #424242;
+    _color: #FFF;
+}
+a.animated-button.sandy-three:after {
+   	border: 3px solid #424242;
+   	opacity: 0;
+   	-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+   	-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+   	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+   	transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}
+a.animated-button.sandy-three:hover:after {
+   	height: 400% !important;
+   	opacity: 1;
+   	_color: #FFF;
+}
+/*#sec2 .art2 ul li .explanation a {
     display: block;
     float: left;        
     padding: 10px 30px;
@@ -283,11 +363,11 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
 }
 #sec2 .art2 ul li .explanation a:hober:after{
     transform: scaleX(1); 
-}
+}*/
 #sec2 .art2 .btn_Box {
     position: absolute;
     left: 49%;
-    bottom: 10%;
+    bottom: 13%;
 }
 #sec2 .art2 .btn_Box p{    
     display: inline-block;
@@ -315,18 +395,15 @@ article, canvas {width: 90%;position: relative; margin: 0 auto;height: 1000px;}
     top: 0;
     background: #fff;
     height: 11vh;
-    _background: pink;
     z-index: 100;
 }
     .h-bottom {
     height: 6vh;
     bottom: 0;
     background: #fff;
-    _background: pink;
     z-index: 100;
 }
 #sec2 .art3{
-    _border: 1px solid;
     text-align: right;
     height: 400px;
 }

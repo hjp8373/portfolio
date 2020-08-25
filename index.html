@@ -27,12 +27,24 @@
             font-size: 25px;
             _margin-bottom: 30px;
             letter-spacing: 10px;
-            border-bottom: 1px solid red;
             text-align: center;
             padding-top: 180px;
-            padding-bottom: 20px
+            padding-bottom: 20px;
         }        
-        
+        h2:after {
+            display: block;
+            content:"";
+            margin-top: 25px;
+            border-bottom: 1px solid #424242;
+            transform: scale(0);
+        }
+        h2 span {
+            display: block;
+            border-bottom: 1px solid #424242;
+            margin-top: 30px;
+            transform: scale(0);
+            transition: 3s;
+        }
     </style>
 </head>
 <!--들어갈 효과들 : 패럴렉스. 부분 스크롤, 텍스트 타이핑 효과, 페이드 인, 슬라이드.-->
@@ -51,6 +63,7 @@
  ?<!--ㅡmain1-->
    
   <section id="sec2">  
+  <!--<h1 style="text-indent: -9999px"></h1>-->
   <article class="main">
       <video src="img/main_bg.mp4" muted autoplay></video>
       <p class="result"></p>   
@@ -58,14 +71,14 @@
   </article>   
        
      <article class="art1">
-        <h2>ABOUT ME</h2>
+        <h2>ABOUT ME <span></span></h2>
         <div class="effect-wrap">
             <div class="effect">
                 <figure class="front">
                     <img src="http://placehold.it/320x450/9c9c9c/ffffff?text=front" alt="front"/>   
                 </figure>
                 <figure class="back">
-                    <img src="http://placehold.it/320x450/9c9c9c/ffffff?text=front" alt="front"/>   
+                    <img src="http://placehold.it/320x450/9c9c9c/ffffff?text=front" alt="back"/>   
                 </figure>
             </div>
         </div>        
@@ -80,12 +93,12 @@
         </ul>
         <div class="about_txt">
             <i class="fas fa-quote-left"></i>
-            <span></span>
+            <span>다짐다짐다짐다짐다짐다짐다짐다짐</span>
             <i class="fas fa-quote-right"></i>            
         </div>
      </article> 
      <article class="art2">
-     <h2>PORTFOLIO</h2>
+     <h2>PORTFOLIO <span></span></h2>
           <ul class="container">
               <li class="page">
                   <img class="view" src="img/mac.png" alt="모니터화면">
@@ -101,8 +114,12 @@
                     <p>제작기간<span> : 3주</span></p>
                     <p>지원기기<span> : PC, Tablet, Mobile</span></p>
                     <p>디자인 컨셉<span> : 심플하면서 정확한 정보전달</span></p>
-                    <a href="https://hjp8373.github.io/addtest/index.html" target="_blank">MORE VIEW</a>
-                    <a href="https://github.com/hjp8373/addtest" target="_blank">MORE CODE</a>
+                    <div class="a-box"> 
+                        <a href="https://hjp8373.github.io/addtest/index.html" target="_blank" class="btn btn-sm animated-button sandy-three">MORE VIEW</a>
+                    </div>
+                    <div class="a-box">
+                        <a href="https://github.com/hjp8373/addtest" target="_blank" class="btn btn-sm animated-button sandy-three" style="top: -69px; left: 200px;" >MORE CODE</a>
+                    </div>
                   </div>                
               </li>
               <li>
@@ -120,20 +137,47 @@
                     <p>제작기간<span> : 3주</span> </p>
                     <p>지원기기<span> : PC, Tablet, Mobile</span></p>
                     <p>담당<span> : 메인의 슬라이드, section2, section4, Sup-page중 community 페이지 100%</span></p>
-                    <a href="https://hjp8373.github.io/onlybath/index.html" target="_blank">MORE VIEW</a>
-                    <a href="https://github.com/hjp8373/onlybath" target="_blank">MORE CODE</a>
+                    <div class="a-box"> 
+                        <a href="https://hjp8373.github.io/onlybath/index.html" target="_blank" class="btn btn-sm animated-button sandy-three">MORE VIEW</a>
+                    </div>
+                    <div class="a-box">
+                        <a href="https://github.com/hjp8373/onlybath" target="_blank" class="btn btn-sm animated-button sandy-three" style="top: -69px; left: 200px;" >MORE CODE</a>
+                    </div>
+                  </div>                
+              </li>
+              <li>
+                  <img class="view" src="img/mac.png" alt="모니터화면">
+                  <div class="slide_Up3">
+                      <!--<img src="http://placehold.it/390x550" alt="">-->
+                  </div>
+                  <div class="explanation">
+                      <h3>03</h3>
+                      <p>프로젝트명<span> : 가상 기업 홈페이지 제작</span></p>
+                      <p>설명<span class="text"> : 건설과 주택 그리고 친횐경에너지를 주 사업으로 경영하는 기업으로 포커스를 맞추어서 그 에 맞는 홈페이지를 만들고자 했습니다.
+                            </span>
+                      </p>
+                    <p>제작기간<span> : 진행중</span> </p>
+                    <p>지원기기<span> : PC, Tablet, Mobile</span></p>
+                    <p>담당<span> : 메인의 슬라이드, section2, section4, Sup-page중 community 페이지 100%</span></p>
+                    <div class="a-box"> 
+                        <a href="https://hjp8373.github.io/portfolio/hanyang/index.html" target="_blank" class="btn btn-sm animated-button sandy-three">MORE VIEW</a>
+                    </div>
+                    <div class="a-box">
+                        <a href="https://github.com/hjp8373/portfolio" target="_blank" class="btn btn-sm animated-button sandy-three" style="top: -69px; left: 200px;" >MORE CODE</a>
+                    </div>
                   </div>                
               </li>              
           </ul>
           <div class="btn_Box">
               <p class="tg">1</p>
               <p>2</p>
+              <p>3</p>
           </div>
               <div class="hh h-top"></div>
               <div class="hh h-bottom"></div>
       </article> 
       <article class="art3">
-          <h2>CONTACT ME</h2>
+          <h2>CONTACT ME <span></span></h2>
           <p>끝까지 봐주셔서 감사합니다 :&#41;</p>
           <p>Phone : 010 - 5620 - 8373</p>
           <p>E-mail : pormz5620@gmail.com</p>
@@ -242,19 +286,20 @@
              if(th == 0){
                  var at = $("#sec2 .main").offset().top;
             
-                 $("html,body").animate({scrollTop:at},1500);
+                 $("html,body").stop().animate({scrollTop:at},1500);
              }
              if(th == 1){
                  var at = $("#sec2 .art1").offset().top;
-                 $("html,body").animate({scrollTop:at},1500);
+                 $("html,body").stop().animate({scrollTop:at},1500);
+                 
              }
              if(th == 2){
                  var at = $("#sec2 .art2").offset().top;
-                 $("html,body").animate({scrollTop:at},1500);
+                 $("html,body").stop().animate({scrollTop:at},1500);
              }
              if(th == 3){
                  var at = $("#sec2 .art3").offset().top-600;
-                 $("html,body").animate({scrollTop:at},1500);
+                 $("html,body").stop().animate({scrollTop:at},1500);
              }
            
        });
@@ -269,13 +314,15 @@
         contents.each(function(){
            var tg =$(this),
                i = tg.index();
-             console.log("인덱스는0 "+i);
-                console.log("인덱스는1 "+tg.offset().top);
-                console.log("인덱스는2 "+ s_top);
+             console.log(s_top);
+             /*console.log("인덱스는1 "+tg.offset().top);
+             console.log("인덱스는2 "+ s_top);*/
             
             if(tg.offset().top <= s_top){
                 menu.removeClass('on');
                 menu.eq(i).addClass('on');
+                
+               
                
             }
             if(i==3){
@@ -284,6 +331,22 @@
                 menu.eq(i).addClass('on');
                
             }
+                
+            }
+            if(s_top >= 700 ) {
+                $('#sec2 > .art1 > h2 span').css({transform:"scale(1)"});
+                $('#sec2 > .art2 > h2 span').css({transform:"scale(0)"});
+                $('#sec2 > .art3 > h2 span').css({transform:"scale(0)"});
+            }
+            if(s_top >= 1651){
+                $('#sec2 > .art1 > h2 span').css({transform:"scale(0)"});
+                $('#sec2 > .art2 > h2 span').css({transform:"scale(1)"});
+                $('#sec2 > .art3 > h2 span').css({transform:"scale(0)"});
+            }
+            if(s_top >= 2451){
+                $('#sec2 > .art1 > h2 span').css({transform:"scale(0)"});
+                $('#sec2 > .art2 > h2 span').css({transform:"scale(0)"});
+                $('#sec2 > .art3 > h2 span').css({transform:"scale(1)"});
                 
             }
         });
