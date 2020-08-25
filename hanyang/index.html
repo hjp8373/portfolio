@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <script>
@@ -25,7 +27,7 @@
                 
                 var ii = $(this).index();
                if (ii == 0){
-                   business.css({background:"url(img/business.png) no-repeat", "background-position":"50%","background-size":"cover"});
+                   business.css({background:"url(img/bn.jpg) no-repeat", "background-position":"50%","background-size":"cover"});
                }else if(ii == 1){
                     business.css({background:"url(img/business2.jpg) no-repeat","background-position":"50%","background-size":"cover"});
                    
@@ -124,9 +126,11 @@
     <section id="business">
        <article>
            <h3 class="title">사업소개</h3>
-            <p class="txt">미래를 준비하는 자세는, 기술의 발전입니다</p>
+           
+               <p class="txt" data-aos="fade-up">미래를 준비하는 자세는, 기술의 발전입니다</p>
+                      
             <ul class="pc_ver">
-                <li>                    
+                <li >                    
                      <div class="box energy">
                      <i class="far fa-sun icon"></i>
                      <p>에너지</p>
@@ -283,7 +287,7 @@
                 <i class="fas fa-long-arrow-alt-right"></i>
             </a>
             <ul class="group_News">
-                <li>
+                <li  data-aos="zoom-in" data-aos-delay="150" data-aos-duration="800">
                     <img src="img/news1.jpg" alt=""/>
                     <p>[파이낸뉴스_보도기사] <br> <span>2020-06-14</span></p>
                     <p>인천 청라시티타워 건설사업 속도낸다</p>
@@ -298,7 +302,7 @@
                         <i class="fas fa-long-arrow-alt-right"></i>
                     </a>
                 </li>
-                <li>
+                <li  data-aos="zoom-in" data-aos-delay="250" data-aos-duration="800">
                     <img src="img/news2.jpg" alt=""/>
                     <p>[S메거진_보도기사] <br> <span>2020-06-12</span></p>
                     <p>새만금 신시-야미지구 기회의 땅 호남, 세계인의 휴양도시 된다</p>
@@ -313,7 +317,7 @@
                         <i class="fas fa-long-arrow-alt-right"></i>
                     </a>
                 </li>
-                <li>
+                <li data-aos="zoom-in" data-aos-delay="350" data-aos-duration="800" >
                     <img src="img/news3.png" alt=""/>
                     <p>[서울경제_보도기사] <br> <span>2020-05-14</span></p>
                     <p>미래, '하남감일 미래수자인' 이달 분양 시작</p>
@@ -380,5 +384,9 @@
          <a href="javascript:;">news <span></span></a>   
          <a href="javascript:;">talent <span></span></a>   
     </div>-->
+        <script src="js/aos.js"></script>
+    <script>
+      if (!window.Cypress) AOS.init();
+    </script>
 </body>
 </html>

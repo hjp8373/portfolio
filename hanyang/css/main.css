@@ -35,7 +35,7 @@ section, article, video, h3, h4, i, p, span, a, div, ul, li, img{transition:1s}
 /*section2 #business*/
 .mm_ver{display: none;}
 #business{
-    background: url(../img/business.png) no-repeat;
+    background: url(../img/bn.jpg) no-repeat;
     background-size: cover;
     background-position:50%;
 }
