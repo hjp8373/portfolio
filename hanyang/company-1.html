@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="css/sub1-1.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
 </head>
+<style>
+     
+</style>
 <body>
     <div id="hd"></div>
     <div id="bg" class="bg_site" >
@@ -31,7 +34,9 @@
             <p>
                 건설을 넘어 에너지, 주택개발사업까지
                 인간과 환경이 조화를 이루는 사회,
-                미래가 만들어갑니다.
+                미래가 만들어갑니다. 
+                사람을 생각하는 기술혁신
+                인류를 생각하는 나눔을 실천삽니다.
             </p>
         </article>
         <article class="content2">
@@ -148,7 +153,7 @@
     <div id="ft"></div>
     <script>
         $('#hd').load('header.html');
-        $('#second > article > .list').fadeOut(0);
+        /*$('#second > article > .list').fadeOut(0);
         $(window).scroll(function(){
            var height = $(document).scrollTop(),
                sec1_Top= $('#second').offset().top; 
@@ -159,7 +164,7 @@
             }else{
                 $('#second > article > .list').fadeOut(1);
             }
-        });
+        });*/
          $.fn.hScroll = function (amount) {
              //        amount = amount || 120;
              amount = $(".year").width()+0;  //박스 가로사이즈 + padding 또느 margin값
@@ -177,8 +182,11 @@
                  event.preventDefault();
                  
                  var idx = $(this).index();
-                 for
-                 if(position >= 0||position <= 1244){
+                /* var amountLeft = amount.offset().left;*/
+                 /*var aIndex = $(
+                    
+                 )*/
+                 if( position>= 0||position <= 1244){
                      $('.list li').removeClass('tg');
                      $('.list li').eq(1).addClass('tg');
                  }else if(position>=1245 || position<=2488){
