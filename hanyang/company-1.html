@@ -13,10 +13,35 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/sub1-1.css">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function(){            
+            $("#hd").load("header.html"); 
+            /*header*/
+            $(window).scroll(function(){
+                var height = $(document).scrollTop();
+                
+                if( height >= 200){
+                    $('header').css({background:"#fff"});
+                    $('header div.pc .logo').css({background:"url(img/logo1.png)no-repeat", "background-size":"80%", "background-position":"center"});                    
+                    $('header > div.pc > ul > li').css({color:"#424242"});
+                    $('header > div.pc > ul > li > ul > li').css({color:"#424242"});
+                    
+                    $('header div.mobile .m_logo img').attr("src", "img/logo1.png");
+                    $('header div.mobile .menu-trigger span').css({background:"#000"});
+                    
+                }else{
+                    $('header').css({background:"linear-gradient(rgba(0,0,0,0.5) 70px, rgba(0,0,0,0.8))"});
+                    $('header div.pc .logo').css({background:"url(img/logo-w.png)no-repeat", "background-size":"80%","background-position":"center"});
+                    $('header > div.pc > ul > li').css({color:"#fff"});
+                    $('header > div.pc > ul > li > ul > li').css({color:"#fff"});
+                    
+                    $('header div.mobile .m_logo img').attr("src", "img/logo-w.png");
+                    $('header div.mobile .menu-trigger span').css({background:"#fff"});
+                };
+            });            
+        });
+    </script>
 </head>
-<style>
-     
-</style>
 <body>
     <div id="hd"></div>
     <div id="bg" class="bg_site" >
@@ -60,7 +85,7 @@
                <b>사람을 존중합니다.</b>
                <p>
                    기업이 곧 사람이기에 인재를 아끼고 사랑하며, 
-                   그들이 꿈과 이상을 실현하고 밝은 미래를 차조해 나갈 수 있도록                   기회의 장을 제공하고 있습니다.
+                   그들이 꿈과 이상을 실현하고 밝은 미래를 창조해 나갈 수 있도록                   기회의 장을 제공하고 있습니다.
                </p>
             </figure>
             <figure class="container c_last">   
@@ -86,8 +111,8 @@
             <div class="history">
                 <div id="year1" class="year y1">
                     <h3>현재(2020)</h3>
-                    <img src="http://placehold.it/520x450" />
-                    <img src="http://placehold.it/520x450" />
+                    <img src="sub/history1-1.jpeg" />
+                    <img src="sub/history1-2.png" />
                     <ul>
                         <li><span>08</span>국내 최대 수상 태양광발전사업 수주</li>
                         <li><span>06</span>김포 사우공설운동장부지 도시개발사업 수주</li>
@@ -98,16 +123,15 @@
                 </div>
                 <div id="year2" class="year y2">
                     <h3>2019</h3>
-                    <img src="http://placehold.it/520x450" />
-                    <img src="http://placehold.it/520x450" />
+                    <img src="sub/history2-2.png" />
+                    <img src="sub/history2-1.jpg" />
                     <ul>
                         <li><span>12</span>양주회천, 경산하양 아파트 건설공사 수주</li>
                         <li><span>09</span>구로항동 미래수자인 에듀힐즈 준공(634세대)</li>
                         <li><span>05</span>보성그룹 한양타워 신사옵 준공</li>
                         <li><span>04</span>수원 인게동 미래 수자인 주상복합 준공(279세대)</li>
-                        <li><span>02</span>
+                        <li><span>02</span>세종시 복합편의시설(제3공사) 수주
                             <ul>
-                                <li>세종시 복합편의시설(제3공사) 수주</li>
                                 <li>울산송정 미래수자인 준공(468세대)</li>
                                 <li>청자국제금융단지 미래수자인 레이크블루 준공(1,534세대)</li>
                             </ul>
@@ -116,21 +140,20 @@
                 </div>
                 <div id="year3" class="year y3">
                     <h3>2018</h3>
-                    <img src="http://placehold.it/520x450" />
-                    <img src="http://placehold.it/520x450" />
+                    <img src="sub/history3-1.png" />
+                    <img src="sub/history3-2.jpg" />
                     <ul>
                         <li><span>12</span>광양그린에너지 바이오매스발전소 공사계획 승인(산업부)</li>
-                        <li><span>07</span>
+                        <li><span>07</span>쿠웨이트 지사 건설, 해외건설공사 개시
                             <ul>
-                                <li>쿠웨이트 지사 건설, 해외건설공사 개시</li>
+                                
                                 <li>다산 C-2BL 미래수자인 리버파크 준공(219세대)</li>
                             </ul>
                         </li>
                         <li><span>06</span>서울 마포우체국 준공</li>
                         <li><span>03</span>천안한당 미래수자인 블루시티 준공(999세대)</li>
-                        <li><span>02</span>
+                        <li><span>02</span>새만금관광래저㈜, 크리스탈쿤과 업무 파트너쉽 협약 체결
                             <ul>
-                                <li>새만금관광래저㈜, 크리스탈쿤과 업무 파트너쉽 협약 체결</li>
                                 <li>행정중심복합도시 2-2m8 준공(906세대)</li>
                             </ul>
                         </li>
@@ -138,8 +161,7 @@
                 </div>
                 <div id="year4" class="year y4">
                     <h3>시작(2017)</h3>
-                    <img src="http://placehold.it/520x450" />
-                    <img src="http://placehold.it/520x450" />
+                    <img src="sub/history4.jpg" />
                     <ul>
                        <li><span>11</span>여의도 미래아파트 준공</li>
                        <li><span>05</span>전기공사업 면허취득</li>
@@ -152,7 +174,6 @@
     </scriton>
     <div id="ft"></div>
     <script>
-        $('#hd').load('header.html');
         /*$('#second > article > .list').fadeOut(0);
         $(window).scroll(function(){
            var height = $(document).scrollTop(),
@@ -201,6 +222,7 @@
         
         
             $('.history').hScroll(1360); // You can pass (optionally) scrolling amount
+        
     </script>
 </body>
 </html>
