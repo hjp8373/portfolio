@@ -1,15 +1,65 @@
+
 <style>
-    footer {width: 100%;margin-top: 150px;background: rgba(0,0,0,0.3)}
-    footer div {width: 80%; margin: 0 auto; max-width: 1600px;position: relative;color: #fff}
-    .f-logo{width: 10%;display: inline;}
-</style>
-<footer>
-   <div>
-    <img src="img/logo1.png" alt="로고" class="f-logo">
-    <p>05836 서울 송파구 법원로 11길 12 ㈜한양</p>
-    <span>대표번호 | 02-5634-2352</span> 
-    <a href="javascript:;;">개인정보처리방침</a>
-    <address>Copyright © MIRAE CORPORATION Co., Ltd. All rights reserved.</address>
-   </div>
+footer {
+    position: relative;
+    z-index: 500;
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    background: rgba(0,0,0,0.3);
+}
+footer * {
+    transition: 1s;
+}
+footer div {
+    width: 80%; 
+    margin: 0 auto; 
+    max-width: 1600px;
+    position: relative;
+    color: #fff;        
+    text-align: center;
+    font-size: 14px;      
+ }
+.f-logo{
+    display:inline-block;
+    width: 90px;
+    vertical-align:middle;
+    margin:0 30px
+ }
+
+/*
+footer div span,a {
+    display:inline-block;  
+    margin: 5px;
+}
+*/
+
+footer div address {
+    display: block;
+    margin:0 15px
+}    
     
+@media screen and (min-width:1280px) and (max-width:1599px){ /*large pc*/        
+}
+@media screen and (min-width:768px) and (max-width:1279px){ /*태블릿*/
+    footer div {width: 90%; }
+    .f-logo {margin: 0 15px}
+    footer div address {margin-left: -20px}
+}
+@media screen and (max-width:767px){ /*mobile*/
+    footer div {width: 90%;text-align: left;}
+    .f-logo{display: block;margin: 0 auto}
+    footer div span, a{ display: block; line-height: 1.8;}
+    footer div address {margin: 0}
+}
+</style>
+<footer>  
+  <div>   
+   <img src="img/logo-w.png" alt="로고" class="f-logo">
+   <span>05836 서울 송파구 잠실6 동 ㈜미래</span>
+   <span>대표번호 | 02-5634-2352</span> 
+   <a href="javascript:;;">개인정보처리방침</a>
+   <address>Copyright © MIRAE CORPORATION Co., Ltd. All rights reserved.</address>
+  </div>    
 </footer>
+
