@@ -481,7 +481,7 @@ h2 span{
     .list li.tg {color: #ec8f26}    
     .list li:first-child a:after{border-top:none;width: 0vw;margin-left: 0px;top: 0;}
     
-    .history {margin-top: 50px;}
+    .history {margin-top: 80px;}
     .year{min-width:90vw;clear: both;}
     .year h3{
         font-size: 20px;
